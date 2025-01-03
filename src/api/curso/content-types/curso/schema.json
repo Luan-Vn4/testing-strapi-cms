@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos",
+  "info": {
+    "singularName": "curso",
+    "pluralName": "cursos",
+    "displayName": "Curso",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Nome": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 50
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria.categoria",
+      "mappedBy": "cursos"
+    },
+    "Conteudo": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.mapa"
+      ]
+    }
+  }
+}

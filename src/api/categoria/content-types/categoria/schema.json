@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "singularName": "categoria",
+    "pluralName": "categorias",
+    "displayName": "Categoria"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nome": {
+      "type": "string",
+      "required": true,
+      "maxLength": 25,
+      "unique": true
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::curso.curso",
+      "inversedBy": "categorias"
+    }
+  }
+}

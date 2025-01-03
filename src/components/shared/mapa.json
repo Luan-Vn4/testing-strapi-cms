@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_mapas",
+  "info": {
+    "displayName": "Mapa",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "Local": {
+      "type": "string"
+    }
+  }
+}

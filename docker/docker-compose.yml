@@ -1,0 +1,11 @@
+services:
+  postgres:
+    container_name: testing-strapi-cms-postgres
+    image: postgres:16
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - ./docker-volumes/postgres:/var/lib/postgresql/data
